@@ -19,12 +19,12 @@ public class MapBuilder : MonoBehaviour
 
         int sum = 0;
         List<PrefabChance> prefabChances = prefabs.Select((prefab) => {
-            TileScript tileScript = prefab.GetComponent<TileScript>();
+            TileInfo tileInfo = prefab.GetComponent<TileInfo>();
             var tp = new PrefabChance {
                 prefab = prefab,
-                chance = sum + tileScript.chance
+                chance = sum + tileInfo.chance
             };
-            sum += tileScript.chance;
+            sum += tileInfo.chance;
             return tp;
         }).ToList();
 
@@ -83,12 +83,18 @@ public class MapBuilder : MonoBehaviour
 
     private void ClearMap()
     {
+        List<GameObject> toDelete = new List<GameObject>();
         foreach (Transform child in transform)
         {
+            toDelete.Add(child.gameObject);
+        }
+
+        foreach (var gameObject in toDelete)
+        {
             if (Application.isEditor)
-                DestroyImmediate(child.gameObject);
+                DestroyImmediate(gameObject);
             else
-                Destroy(child.gameObject);
+                Destroy(gameObject);
         }
     }
 

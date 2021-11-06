@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7431223618855460741}
-  - component: {fileID: 2060249183964670491}
+  - component: {fileID: 5359888267239747448}
   m_Layer: 0
   m_Name: Tile_1
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2060249183964670491
+--- !u!114 &5359888267239747448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd719206e05bdf646906279f39d54fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 80
+  chance: 90
 --- !u!1 &4035938902539067188
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 301766819269248031}
   - component: {fileID: 4216985804561689499}
   - component: {fileID: 2543868270197207356}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
